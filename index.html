@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <title>Happy Birthday</title>
     <style>
         body {
             display: flex;
@@ -11,20 +11,8 @@
             align-items: center;
             min-height: 100vh;
             background-color: #f9f5f0;
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            color: #333;
-        }
-
-        .card {
-            display: flex;
-            align-items: center;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 80%;
-            max-width: 700px;
+            font-family: 'Arial', sans-serif;
         }
 
         .heart {
@@ -34,7 +22,7 @@
             background-color: red;
             transform: rotate(-45deg);
             animation: beat 1s infinite;
-            margin-right: 20px;
+            cursor: pointer;
         }
 
         .heart::before,
@@ -65,37 +53,10 @@
                 transform: scale(1.2) rotate(-45deg);
             }
         }
-
-        .text {
-            max-width: 500px;
-        }
-
-        .text h1 {
-            font-size: 24px;
-            margin: 0;
-            color: #e63946;
-        }
-
-        .text p {
-            font-size: 16px;
-            line-height: 1.5;
-            margin: 10px 0;
-        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <div class="heart"></div>
-        <div class="text">
-            <h1> Feliz cumpleaños amor de todas mis vidas :3 </h1>
-            <p>
-            Hoy sera un día increible para ti, 
-            me llena de orgullo la persona en la que te has convertido, se lo mucho que luchaste por estar feliz. 
-            Te deseo lo mejor en tu examen y disfruta mucho de tu fiesta.
-            Te amo, nos vemos prontito para celebrar juntos :D
-            </p>
-        </div>
-    </div>
+    <div class="heart" onclick="window.location.href='candles.html'"></div>
 </body>
 </html>
 
