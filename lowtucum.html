@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
+            margin-bottom: 20px;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 50px;
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.2) rotate(-45deg);
+            }
+        }
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <h1>Feliz cumpleaños amor de mi vida :3 </h1>
+    <p>Te amo más de lo que las palabras o el código pueden expresar. Espero que este pequeño detalle te saque una sonrisa. 🎉</p>
+    <button id="messageButton"> Haz clic para ver un mensaje :b </button>
+    <p id="specialMessage" style="display: none; margin-top: 20px; font-size: 18px;">¡Eres el amor de mi vida y estoy feliz de celebrar otro año contigo! 💖</p>
+
+    <script>
+        const button = document.getElementById('messageButton');
+        const message = document.getElementById('specialMessage');
+
+        button.addEventListener('click', () => {
+            message.style.display = 'block';
+            button.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
