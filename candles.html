@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Candles</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #222;
+            color: white;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .candle-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .candle {
+            position: relative;
+            width: 40px;
+            height: 80px;
+            background: gray;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .candle .label {
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .flame {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: orange;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            display: none; /* Initially hidden */
+        }
+
+        .flame.active {
+            display: block;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="candle-row">
+        <!-- First group of candles (lit by default) -->
+        <div class="candle">
+            <div class="flame active"></div>
+        </div>
+        <div class="candle">
+            <div class="flame active"></div>
+        </div>
+        <div class="candle">
+            <div class="flame active"></div>
+        </div>
+        <!-- Center candles -->
+        <div class="candle" onclick="toggleFlame(this)">
+            <div class="flame"></div>
+            <div class="label">Letz</div>
+        </div>
+        <div class="candle" onclick="toggleFlame(this)">
+            <div class="flame"></div>
+            <div class="label">Low</div>
+        </div>
+        <!-- Second group of candles (lit by default) -->
+        <div class="candle">
+            <div class="flame active"></div>
+        </div>
+        <div class="candle">
+            <div class="flame active"></div>
+        </div>
+        <div class="candle">
+            <div class="flame active"></div>
+        </div>
+    </div>
+
+    <div class="message">Feliz 7 de diciembre</div>
+
+    <script>
+        function toggleFlame(candle) {
+            const flame = candle.querySelector('.flame');
+            flame.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
